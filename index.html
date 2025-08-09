@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title Tag (Include Brand + Keywords) -->
+    <title>Ennovat Studio | Your Complete Brand Solution</title>
+
+    <!-- Meta Description -->
+    <meta name="description" content="Ennovat Studio empowers brands with comprehensive solutions, including video editing, graphic design, digital marketing, and web development, helping you achieve growth and excellence." />
+
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="website development, web design, Ennovat Studio, responsive websites, business websites, custom website design, UI/UX, SEO friendly web development, graphics design, video editing, portfolio website, ai agent" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://studio.ennovat.com/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Ennovat Studio | Your Complete Brand Solution" />
+    <meta property="og:description" content="Ennovat Studio empowers brands with comprehensive solutions, including video editing, graphic design, digital marketing, and web development, helping you achieve growth and excellence." />
+    <meta property="og:image" content="https://ennovatstudio.com/assets/og-image.png" />
+    <meta property="og:url" content="https://studio.ennovat.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ennovat Studio | Your Complete Brand Solution" />
+    <meta name="twitter:description" content="Ennovat Studio empowers brands with comprehensive solutions, including video editing, graphic design, digital marketing, and web development, helping you achieve growth and excellence." />
+    <meta name="twitter:image" content="https://studio.ennovat.com/assets/og-image.png" />
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
+
+    <!-- Replace old Font Awesome with CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Add Plus Jakarta Sans font -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2e7dff',
+                        dark: '#111111'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        /* Fade In Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Slide In Animation */
+        @keyframes slideIn {
+            from { transform: translateX(-100px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        /* Scale Animation */
+        @keyframes scaleIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Smooth Scroll Behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animation Classes */
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        .animate-slide-in {
+            animation: slideIn 0.8s ease-out forwards;
+        }
+
+        .animate-scale-in {
+            animation: scaleIn 0.8s ease-out forwards;
+        }
+
+        /* Scroller Animation Fix */
+        .scroller-inner {
+            display: flex;
+            gap: 2rem;
+            animation: scroll 30s linear infinite;
+        }
+
+        .scroller-inner > * {
+            flex-shrink: 0;
+        }
+
+        @keyframes scroll {
+            to { transform: translate(calc(-50% - 1rem)); }
+        }
+
+        /* Hover Animations */
+        .hover-lift {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Button Animations */
+        .animated-button {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .animated-button::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: -100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .animated-button:hover::after {
+            left: 100%;
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-gray-100">
+    <!-- Updated Header -->
+    <header class="bg-dark/50 backdrop-blur-sm animate-fade-in">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <img src="assets/ennovat-studio-logo.png" alt="Logo" class="h-12 w-auto">
+            </div>
+            <nav class="flex items-center">
+                <div class="flex items-center gap-6 text-gray-300">
+                    <a href="https://www.facebook.com/teamennovat" class="hover:text-primary"><i class="fab fa-facebook text-3xl"></i></a>
+                    <a href="https://www.linkedin.com/company/ennovat/" class="hover:text-primary"><i class="fab fa-linkedin text-3xl"></i></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-6 py-16 flex flex-col lg:flex-row items-center animate-fade-in" style="animation-delay: 0.2s">
+        <!-- Left Content -->
+        <div class="lg:w-1/2">
+            <h2 class="text-4xl lg:text-5xl font-bold text-gray-100 leading-tight uppercase">
+                BUILD YOUR DIGITAL PRESENCE WITH <span class="text-primary">ENNOVAT STUDIO</span>
+            </h2>
+            <p class="mt-4 text-gray-300">
+                We help businesses grow by creating stunning websites, apps, and digital experiences.
+            </p>
+            <div class="mt-6 flex space-x-4">
+                <button onclick="document.getElementById('websites').scrollIntoView({ behavior: 'smooth' });" class="animated-button px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/80 transition-all duration-300 group flex items-center">
+                    Our Works
+                    <i class="fas fa-arrow-right ml-2 -rotate-45 transform group-hover:rotate-0 transition-transform duration-300"></i>
+                </button>
+                <button class="animated-button px-6 py-3 text-primary uppercase bg-primary/10 rounded-lg hover:bg-primary/30 transition-all duration-300">Contact Us</button>
+            </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="lg:w-1/2 mt-10 lg:mt-0 relative md:pl-32 group perspective-1000">
+            <div class="relative">
+                <img src="assets/hero-image.jpg" alt="Hero Image" class="w-full rounded-lg shadow-lg">
+                
+                <!-- 3D Stats Card -->
+                <div class="absolute -bottom-6 left-2 right-2 flex justify-around bg-white/90 p-4 rounded-lg shadow-lg 
+                        transition-transform duration-500 ease-in-out transform group-hover:-translate-y-8 group-hover:-rotate-x-6 
+                        [transform-style:preserve-3d] [backface-visibility:hidden]">
+                    <div class="hover-lift">
+                        <p class="text-2xl font-bold text-gray-900 counter" data-target="50">0</p>
+                        <p class="text-sm text-gray-500">Projects Completed</p>
+                    </div>
+                    <div class="hover-lift">
+                        <p class="text-2xl font-bold text-gray-900 counter" data-target="10">0</p>
+                        <p class="text-sm text-gray-500">Satisfied Clients</p>
+                    </div>
+
+                    <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const counters = document.querySelectorAll('.counter');
+                        counters.forEach(counter => {
+                        const updateCount = () => {
+                            const target = +counter.getAttribute('data-target');
+                            const count = +counter.innerText.replace('+', '');
+                            const increment = target / 200;
+
+                            if (count < target) {
+                            counter.innerText = Math.ceil(count + increment) + '+';
+                            setTimeout(updateCount, 10);
+                            } else {
+                            counter.innerText = target + '+';
+                            }
+                        };
+                        updateCount();
+                        });
+                    });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="overflow-hidden bg-dark/50 backdrop-blur-sm py-6 animate-fade-in" style="animation-delay: 0.4s">
+        <div class="relative">
+            <!-- Scroller 1 - Left to Right -->
+            <div class="scroller">
+                <div class="scroller-inner">
+                    <div class="flex items-center text-5xl uppercase font-bold text-gray-300">
+                        <span class="opacity-25">Website</span>
+                        <span class="mx-4 text-primary">•</span>
+                        <span class="opacity-75">Software</span>
+                        <span class="mx-4 text-primary">•</span>
+                        <span class="opacity-25">Apps</span>
+                        <span class="mx-4 text-primary">•</span>
+                        <span class="opacity-75">Digital Marketing</span>
+                        <span class="mx-4 text-primary">•</span>
+                    </div>
+                    <div class="flex items-center text-5xl uppercase font-bold text-gray-300">
+                        <span class="opacity-25">Website</span>
+                        <span class="mx-4 text-primary">•</span>
+                        <span class="opacity-75">Software</span>
+                        <span class="mx-4 text-primary">•</span>
+                        <span class="opacity-25">Apps</span>
+                        <span class="mx-4 text-primary">•</span>
+                        <span class="opacity-75">Marketing</span>
+                        <span class="mx-4 text-primary">•</span>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Scroller 2 - Right to Left -->
+            <div class="scroller mt-4" data-direction="right">
+                <div class="scroller-inner">
+                    <div class="flex items-center text-5xl uppercase font-bold text-gray-300">
+                        <span class="opacity-25">SEO Optimization</span>
+                        <span class="mx-4 text-primary">•</span>
+                        <span class="opacity-75">AI Agent</span>
+                        <span class="mx-4 text-primary">•</span>
+                        <span class="opacity-25">Video Editing</span>
+                        <span class="mx-4 text-primary">•</span>
+                        <span class="opacity-75">Graphics Design</span>
+                        <span class="mx-4 text-primary">•</span>
+                    </div>
+                    <div class="flex items-center text-5xl uppercase font-bold text-gray-300">
+                        <span class="opacity-25">SEO Optimization</span>
+                        <span class="mx-4 text-primary">•</span>
+                        <span class="opacity-75">AI Agent</span>
+                        <span class="mx-4 text-primary">•</span>
+                        <span class="opacity-25">Video Editing</span>
+                        <span class="mx-4 text-primary">•</span>
+                        <span class="opacity-75">Graphics Design</span>
+                        <span class="mx-4 text-primary">•</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        .scroller {
+            max-width: 100%;
+            overflow: hidden;
+        }
+        
+        .scroller-inner {
+            display: flex;
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            min-width: 100%;
+            animation: scroll 30s linear infinite;
+        }
+        
+        .scroller[data-direction="right"] .scroller-inner {
+            animation: scroll-reverse 30s linear infinite;
+        }
+        
+        @keyframes scroll {
+            from {
+                transform: translateX(0%);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+        
+        @keyframes scroll-reverse {
+            from {
+                transform: translateX(-50%);
+            }
+            to {
+                transform: translateX(0%);
+            }
+        }
+        
+        .scroller:hover .scroller-inner {
+            animation-play-state: paused;
+        }
+    </style>
+
+    <!-- Global Reach Section -->
+    <section class="container mx-auto px-6 py-16 flex flex-col lg:flex-row items-center animate-fade-in" style="animation-delay: 0.6s">
+        <!-- Left Content: Floating and Waving Image -->
+        <div class="lg:w-1/2 flex justify-center">
+            <div class="relative w-64 h-64">
+            <img src="assets/space-man.png" alt="Waving Image" 
+                 class="w-full h-full object-cover rounded-lg shadow-lg animate-floating animate-waving">
+            </div>
+        </div>
+
+        <style>
+            @keyframes floating {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            }
+
+            @keyframes waving {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(5deg);
+            }
+            75% {
+                transform: rotate(-5deg);
+            }
+            }
+
+            .animate-floating {
+            animation: floating 10s ease-in-out infinite;
+            }
+
+            .animate-waving {
+            animation: waving 5s ease-in-out infinite;
+            }
+        </style>
+
+        <!-- Right Content: Title, Description, and Action Button -->
+        <div class="lg:w-1/2 mt-10 lg:mt-0">
+            <h2 class="text-4xl lg:text-5xl font-bold text-gray-100 leading-tight uppercase">
+                Global Reach with <span class="text-primary">Ennovat Studio</span>
+            </h2>
+            <p class="mt-4 text-gray-300">
+                Our services span across the globe, connecting businesses and individuals with innovative digital solutions.
+            </p>
+            <div class="mt-6">
+                <button class="animated-button py-3 text-primary font-semibold border-b border-primary hover:text-white hover:border-white transition-all duration-300 group flex items-center">
+                    Let's Talk
+                    <i class="fas fa-arrow-right ml-2 -rotate-45 transform group-hover:rotate-0 transition-transform duration-300"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="container mx-auto px-6 py-16 animate-fade-in" style="animation-delay: 0.8s">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center py-4 px-8 rounded-2xl bg-primary">
+            <!-- Left Column: Header -->
+            <div class="lg:col-span-2">
+                <h2 class="text-2xl lg:text-3xl font-bold text-gray-100 leading-tight uppercase">
+                    We help real <span class="text-dark">businesses</span> to grow
+                </h2>   
+            </div>
+
+            <!-- Right Columns: Total Reach and Generated Revenue -->
+            <div class="lg:col-span-3 grid grid-cols-2 gap-8">
+                <!-- Total Reach -->
+                <div class="hover-lift bg-primary/50 py-6 sm:p-6 rounded-lg text-right">
+                    <h3 class="text-2xl font-bold text-gray-100">50M+</h3>
+                    <p class="text-sm sm:text-lg uppercase font-semibold text-gray-100 opacity-50">Total Reach</p>
+                </div>
+
+                <!-- Generated Revenue -->
+                <div class="hover-lift bg-primary/50 py-6 sm:p-6 rounded-lg text-right">
+                    <h3 class="text-2xl font-bold text-gray-100">$5M+</h3>
+                    <p class="text-sm sm:text-lg uppercase font-semibold text-gray-100 opacity-50">Total Revenue</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Single Row Infinite Clients Scroller Section -->
+    <section class="container mx-auto px-6 py-16 overflow-hidden animate-fade-in" style="animation-delay: 1s">
+        <div class="flex flex-col items-end">
+            <h2 class="text-4xl font-bold mb-2 uppercase text-right">
+            Our Valued <span class="text-primary">Partners</span>
+            </h2>
+            <p class="text-gray-300 mb-8 lg:w-1/2 text-right">
+            We are proud to collaborate with industry-leading clients who trust us to deliver exceptional results.
+            </p>
+        </div>
+
+        <!-- Logo scroller with fade effects -->
+        <div class="relative">
+        <!-- Fade gradient left -->
+        <div class="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-dark to-transparent z-10"></div>
+        
+        <!-- Scroller container -->
+        <div class="scroller">
+            <div class="scroller-inner">
+            <!-- Single row of logos that repeats -->
+            <div class="flex items-center gap-10">
+                <div class="text-center flex-shrink-0 mx-4">
+                    <img src="assets/client-logo-1.png" alt="Client 1" class="h-10 w-auto opacity-50 hover:opacity-100 transition-all duration-500 hover:scale-105" title="Client 1">
+                </div>
+                <div class="text-center flex-shrink-0 mx-4">
+                    <img src="assets/client-logo-2.png" alt="Client 2" class="h-10 w-auto opacity-50 hover:opacity-100 transition-all duration-500 hover:scale-105" title="Client 2">
+                </div>
+                <div class="text-center flex-shrink-0 mx-4">
+                    <img src="assets/client-logo-3.png" alt="Client 3" class="h-10 w-auto opacity-50 hover:opacity-100 transition-all duration-500 hover:scale-105" title="Client 3">
+                </div>
+                <div class="text-center flex-shrink-0 mx-4">
+                    <img src="assets/client-logo-4.png" alt="Client 4" class="h-10 w-auto opacity-50 hover:opacity-100 transition-all duration-500 hover:scale-105" title="Client 4">
+                </div>
+                <div class="text-center flex-shrink-0 mx-4">
+                    <img src="assets/client-logo-5.png" alt="Client 5" class="h-10 w-auto opacity-50 hover:opacity-100 transition-all duration-500 hover:scale-105" title="Client 5">
+                </div>
+                <div class="text-center flex-shrink-0 mx-4">
+                    <img src="assets/client-logo-6.png" alt="Client 6" class="h-10 w-auto opacity-50 hover:opacity-100 transition-all duration-500 hover:scale-105" title="Client 6">
+                </div>
+                <div class="text-center flex-shrink-0 mx-4">
+                    <img src="assets/client-logo-7.png" alt="Client 7" class="h-10 w-auto opacity-50 hover:opacity-100 transition-all duration-500 hover:scale-105" title="Client 7">
+                </div>
+            </div>
+            
+            <!-- Duplicate logos for seamless infinite loop -->
+            <div class="flex items-center gap-10">
+                <div class="text-center flex-shrink-0 mx-4">
+                    <img src="assets/client-logo-1.png" alt="Client 1" class="h-10 w-auto opacity-50 hover:opacity-100 transition-all duration-500 hover:scale-105" title="Client 1">
+                </div>
+                <div class="text-center flex-shrink-0 mx-4">
+                    <img src="assets/client-logo-2.png" alt="Client 2" class="h-10 w-auto opacity-50 hover:opacity-100 transition-all duration-500 hover:scale-105" title="Client 2">
+                </div>
+                <div class="text-center flex-shrink-0 mx-4">
+                    <img src="assets/client-logo-3.png" alt="Client 3" class="h-10 w-auto opacity-50 hover:opacity-100 transition-all duration-500 hover:scale-105" title="Client 3">
+                </div>
+                <div class="text-center flex-shrink-0 mx-4">
+                    <img src="assets/client-logo-4.png" alt="Client 4" class="h-10 w-auto opacity-50 hover:opacity-100 transition-all duration-500 hover:scale-105" title="Client 4">
+                </div>
+                <div class="text-center flex-shrink-0 mx-4">
+                    <img src="assets/client-logo-5.png" alt="Client 5" class="h-10 w-auto opacity-50 hover:opacity-100 transition-all duration-500 hover:scale-105" title="Client 5">
+                </div>
+                <div class="text-center flex-shrink-0 mx-4">
+                    <img src="assets/client-logo-6.png" alt="Client 6" class="h-10 w-auto opacity-50 hover:opacity-100 transition-all duration-500 hover:scale-105" title="Client 6">
+                </div>
+                <div class="text-center flex-shrink-0 mx-4">
+                    <img src="assets/client-logo-7.png" alt="Client 7" class="h-10 w-auto opacity-50 hover:opacity-100 transition-all duration-500 hover:scale-105" title="Client 7">
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <!-- Fade gradient right -->
+        <div class="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-dark to-transparent z-10"></div>
+        </div>
+
+        <!-- Add CSS for smooth animation -->
+        <style>
+            .scroller {
+                max-width: 100%;
+                overflow: hidden;
+            }
+            
+            .scroller-inner {
+                display: flex;
+                position: relative;
+                width: max-content;
+                animation-name: scroll;
+                animation-duration: 30s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+            
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-20%));
+                }
+            }
+            
+            /* Pause animation on hover */
+            .scroller:hover .scroller-inner {
+                animation-play-state: paused;
+            }
+        </style>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="container mx-auto px-6 py-16 animate-fade-in" style="animation-delay: 1.2s">
+        <div class="text-left">
+            <h2 class="text-4xl font-bold mb-2 uppercase">
+                Our <span class="text-primary">Projects</span>
+            </h2>
+            <p class="text-gray-300 mb-8 lg:w-1/2">
+                Explore our diverse portfolio showcasing our expertise in websites, applications, and graphics.
+            </p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="mb-6">
+            <button class="tab-button px-6 py-2 text-primary uppercase bg-primary/10 rounded-lg mr-4 hover:bg-primary/30 transition-all duration-300 active" data-tab="websites">Websites</button>
+            <!-- <button class="tab-button px-6 py-2 text-primary uppercase bg-primary/10 rounded-lg mr-4 hover:bg-primary/30 transition-all duration-300" data-tab="applications">Applications</button> -->
+            <button class="tab-button px-6 py-2 text-primary uppercase bg-primary/10 rounded-lg mr-4 hover:bg-primary/30 transition-all duration-300" data-tab="graphics">Graphics</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="websites">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="relative group aspect-square overflow-hidden hover-lift">
+                    <img src="assets/website-1.png" alt="Website 1" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                </div>
+                <div class="relative group aspect-square overflow-hidden hover-lift">
+                    <img src="assets/website-2.png" alt="Website 2" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                </div>
+                <div class="relative group aspect-square overflow-hidden hover-lift">
+                    <img src="assets/website-3.png" alt="Website 3" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content hidden" id="applications">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="relative group aspect-square overflow-hidden hover-lift">
+                    <img src="assets/application1.jpg" alt="Application 1" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                </div>
+                <div class="relative group aspect-square overflow-hidden hover-lift">
+                    <img src="assets/application2.jpg" alt="Application 2" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                </div>
+                <div class="relative group aspect-square overflow-hidden hover-lift">
+                    <img src="assets/application3.jpg" alt="Application 3" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content hidden" id="graphics">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="relative group aspect-square overflow-hidden hover-lift">
+                    <img src="assets/graphics-1.png" alt="Graphic 1" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                </div>
+                <div class="relative group aspect-square overflow-hidden hover-lift">
+                    <img src="assets/graphics-2.png" alt="Graphic 2" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                </div>
+                <div class="relative group aspect-square overflow-hidden hover-lift">
+                    <img src="assets/graphics-3.png" alt="Graphic 3" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tabButtons = document.querySelectorAll(".tab-button");
+            const tabContents = document.querySelectorAll(".tab-content");
+
+            tabButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    // Remove active class from all buttons
+                    tabButtons.forEach(btn => btn.classList.remove("active"));
+                    // Hide all tab contents
+                    tabContents.forEach(content => content.classList.add("hidden"));
+
+                    // Add active class to clicked button
+                    button.classList.add("active");
+                    // Show corresponding tab content
+                    const tabId = button.getAttribute("data-tab");
+                    document.getElementById(tabId).classList.remove("hidden");
+                });
+            });
+        });
+    </script>
+
+    <style>
+        .tab-button.active {
+            background-color: #2e7dff;
+            color: #fff;
+        }
+
+        .aspect-square {
+            position: relative;
+            width: 100%;
+            padding-top: 100%; /* 1:1 Aspect Ratio */
+        }
+
+        .aspect-square img {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+
+    <!-- Reviews Section -->
+    <section class="container mx-auto px-6 py-16 animate-fade-in" style="animation-delay: 1.4s">
+        <div class="text-left"></div>
+            <h2 class="text-4xl font-bold mb-2 uppercase">
+                What Our <span class="text-primary">Clients Say</span>
+            </h2>
+            <p class="text-gray-300 mb-8 lg:w-1/2">
+                Hear from our satisfied clients who have experienced our exceptional services.
+            </p>
+        </div>
+
+        <!-- Responsive Grid of Reviews -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Review 1 -->
+            <div class="hover-lift bg-dark/50 p-6 pl-0 rounded-lg shadow-lg relative">
+                <div class="absolute top-0 left-0 text-primary text-6xl font-bold">
+                    &ldquo;
+                </div>
+                <p class="text-gray-300 italic mb-4 mt-8">
+                    Ennovat Studio transformed our online presence with a stunning website. Their team is professional and highly skilled!
+                </p>
+                <div class="flex items-center gap-4">
+                    <img src="assets/client-1.jpg" alt="Client 1" class="w-12 h-12 rounded-full object-cover">
+                    <div>
+                        <h4 class="text-gray-100 font-bold">John Doe</h4>
+                        <p class="text-gray-400 text-sm">CEO, TechCorp</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="hover-lift bg-dark/50 p-6 pl-0 rounded-lg shadow-lg relative">
+                <div class="absolute top-0 left-0 text-primary text-6xl font-bold">
+                    &ldquo;
+                </div>
+                <p class="text-gray-300 italic mb-4 mt-8">
+                    Their creativity and attention to detail are unmatched. Highly recommend Ennovat Studio for digital solutions!
+                </p>
+                <div class="flex items-center gap-4">
+                    <img src="assets/client-2.jpg" alt="Client 2" class="w-12 h-12 rounded-full object-cover">
+                    <div>
+                        <h4 class="text-gray-100 font-bold">Jane Smith</h4>
+                        <p class="text-gray-400 text-sm">Marketing Manager, Brandify</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="hover-lift bg-dark/50 p-6 pl-0 rounded-lg shadow-lg relative">
+                <div class="absolute top-0 left-0 text-primary text-6xl font-bold">
+                    &ldquo;
+                </div>
+                <p class="text-gray-300 italic mb-4 mt-8">
+                    Working with Ennovat Studio was a game-changer for our business. Their expertise is truly remarkable.
+                </p>
+                <div class="flex items-center gap-4">
+                    <img src="assets/client-3.jpg" alt="Client 3" class="w-12 h-12 rounded-full object-cover">
+                    <div>
+                        <h4 class="text-gray-100 font-bold">Michael Lee</h4>
+                        <p class="text-gray-400 text-sm">Founder, StartUp Inc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="bg-primary container lg:rounded-xl py-16 px-6 mx-auto text-center animate-fade-in" style="animation-delay: 1.6s">
+            <h2 class="text-4xl lg:text-5xl font-bold text-gray-100 leading-tight uppercase mb-6">
+                Ready to Elevate Your Business?
+            </h2>
+            <p class="text-gray-300 mb-8 lg:w-2/3 mx-auto">
+                Partner with Ennovat Studio to create innovative digital solutions that drive growth and success.
+            </p>
+            <button class="animated-button px-8 py-4 bg-white text-primary font-semibold rounded-lg hover:bg-gray-200 transition-all duration-300 group flex items-center mx-auto">
+                Let's Talk
+                <i class="fas fa-arrow-right ml-2 -rotate-45 transform group-hover:rotate-0 transition-transform duration-300"></i>
+            </button>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container mx-auto px-6 py-16 animate-fade-in" style="animation-delay: 1.8s">
+        <h2 class="text-4xl font-bold mb-4 uppercase">
+            Get in <span class="text-primary">Touch</span>
+        </h2>
+        <p class="text-gray-300 mb-8 lg:w-2/5">
+            Have questions or want to work with us? Fill out the form below, and we'll get back to you shortly.
+        </p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <!-- Contact Form -->
+            <form class="space-y-6">
+                <input type="text" id="name" name="name" class="w-full p-4 bg-white/5 text-gray-100 rounded-lg focus:border focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" class="w-full p-4 bg-white/5 text-gray-100 rounded-lg focus:border focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Your Email" required>
+                <textarea id="message" name="message" rows="4" class="w-full p-4 bg-white/5 text-gray-100 rounded-lg focus:border focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Your Message" required></textarea>
+                <button type="submit" class="animated-button px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/80 transition-all duration-300">
+                    Send Message
+                </button>
+            </form>
+
+            <!-- Contact Details -->
+            <ul class="space-y-8">
+                <li class="flex items-center gap-4">
+                    <div class="bg-primary/10 rounded-md h-14 w-14 flex items-center justify-center">
+                        <i class="fas fa-envelope text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-gray-100 font-bold">Email Us</p>
+                        <span class="text-gray-500">studio@ennovat.com</span>
+                    </div>
+                </li>
+                <li class="flex items-center gap-4">
+                    <div class="bg-primary/10 rounded-md h-14 w-14 flex items-center justify-center">
+                        <i class="fas fa-phone text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-gray-100 font-bold">Call Us</p>
+                        <span class="text-gray-500">+880 1531-702054</span>
+                    </div>
+                </li>
+                <li class="flex items-center gap-4">
+                    <div class="bg-primary/10 rounded-md h-14 w-14 flex items-center justify-center">
+                        <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                    </div>
+                    <div>
+                        <p class="text-gray-100 font-bold">Visit Us</p>
+                        <span class="text-gray-500">123 Innovation Street, Tech City, USA</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark py-8 text-gray-300 animate-fade-in" style="animation-delay: 2s">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Logo and Copyright -->
+                <div class="flex items-center gap-2 mb-4 md:mb-0">
+                    <img src="assets/ennovat-studio-logo.png" alt="Logo" class="h-10 w-auto">
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="flex gap-6 text-sm">
+                    <p class="text-sm">&copy; 2025 Ennovat Studio. All rights reserved.</p>
+                </nav>
+
+                <!-- Social Media Links -->
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="https://www.facebook.com/teamennovat" class="hover:text-primary"><i class="fab fa-facebook text-2xl"></i></a>
+                    <a href="https://www.linkedin.com/company/ennovat/" class="hover:text-primary"><i class="fab fa-linkedin text-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Add scroll reveal script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(section => {
+                section.style.opacity = '0';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+
+</html>
